@@ -35,13 +35,15 @@ btnBuscarFilme.onclick = () =>{
     }
     return false;
 }
-let listarFilmes= async (filmes)=>{
-    let listaFilmes= await document.querySelector("#lista-filmes");
-    listaFilmes.innerHTML= "";
+async function listarFilmes(filmes) {
+    let listaFilmes = await document.querySelector("#lista-filmes");
+    listaFilmes.innerHTML = "";
     console.log(listaFilmes);
-    if(filmes.lenght > 0){
-        filmes.forEach(async(filme)=>{
+    if (filmes.lenght > 0) {
+        filmes.forEach(async (filme) => {
             listaFilmes.appendChild(await filme.getCard());
-        })
+            filmes.push(filme)
+        });
+        listarFilmes(filmes);
     }
 }
