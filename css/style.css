@@ -11,3 +11,6 @@
 .container-fluid img{
     height:8vh;
 }
+#lista-filmes{
+    display:none;
+}

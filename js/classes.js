@@ -11,18 +11,30 @@ class Diretor{
     }
 }
 class Filme{
-    constructor(id,titulo,ano,categoria,cartaz,direcao,atores,classificacao,avaliacao){
+    constructor(id,titulo,ano,genero,duracao,cartaz,sinopse,direcao,elenco,classificacao,avaliacao){
         this.id=id;
         this.titulo=titulo;
         this.ano=ano;
-        this.categoria=categoria;
+        this.genero=genero;
+        this.duracao=duracao;
+        this.sinopse=sinopse;
         this.cartaz=cartaz;
         this.direcao=direcao;
-        this.atores=atores;
+        this.elenco=elenco;
         this.classificacao=classificacao;
         this.avaliacao=avaliacao;
+        this.btnDetalhes=null;
     }
-    getCard=async ()=>{
+    setBtnDetalhes=() =>{
+        this.btnDetalhes =document.createElement('button');
+        this.btnDetalhes.appendChild(document.createTextNode("Detalhes"));
+        this.btnDetalhes.setAttribute("id",this.id);
+        this.btnDetalhes.setAttribute("class","btnDetalhesFilme");
+    }
+    getBtnDetalhes=()=>{
+        return this.btnDetalhes
+    }
+    getCard = ()=>{
         let card =document.createElement("div");
         card.setAttribute("class","card");
         let imgCartaz=document.createElement("img");
@@ -53,35 +65,20 @@ class Filme{
         card.appendChild(cardBody);
         cardBody.appendChild(hCardTitle);
         cardBody.appendChild(divDetalhes);
+
+        this.setBtnDetalhes();
+        cardBody.appendChild(this.getBtnDetalhes());
+
         return card;
     }
+    
 }
-let direcao = [
-    new Diretor(1,"Lana Wachowski"),
-    new Diretor(2,"Lilly Wachowski"),
-]
-let elenco = [
-    new Ator(1,"Keanu Reeves"),
-    new Ator(2,"Carrie-Anne Moss"),
-    new Ator(3,"Laurence Fischburne"),
-    new Ator(4,"Joe Pantaloiano"),
-    new Ator(5,"Hugo Weaving"),
-    new Ator(6,"Antony Ray Parker"),
-]
-let sinopse = "O jovem programador Thomas Anderson é atormentado por estranhos pesadelos em que está sempre conectado por cabos a um imenso sistema de computadores do futuro. À medida que o sonho se repete, ele começa a desconfiar da realidade. Thomas conhece os misteriosos Morpheus e Trinity e descobre que é vítima de um sistema inteligente e artificial chamado Matrix, que manipula a mente das pessoas e cria a ilusão de um mundo real enquanto usa os cérebros e corpos dos indivíduos para produzir energia."
-let cartaz="https://cdn.ome.lt/AD3QGEDWUBKncwHsM3hvHkRPZnM=/987x0/smart/uploads/conteudo/fotos/matrix_resurrections.jpg"
-let genero = ["Ação","Aventura","Ficção cientifica"];
-let filme= new Filme(
-    1,
-    "Matrix",
-    1999,
-    genero,
-    102,
-    sinopse,
-    cartaz,
-    direcao,
-    elenco,
-    14,
-    null
-);
-console.log(filme);
+class Detalhes{
+    constructor(titulo,ano,id,tipo,poster){
+    this.titulo=titulo;
+    this.ano=ano;
+    this.id=id;
+    this.tipo=tipo;
+    this.poster=poster;
+}
+}
