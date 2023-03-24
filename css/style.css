@@ -1,16 +1,49 @@
 *{
     margin: 0;
     padding:0;
+    font-family:Arial, Helvetica, sans-serif;
 }
+
 #lista-filmes{
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
-    padding: 2rem;
+    padding: 1.3rem;
 }
-.container-fluid img{
-    height:8vh;
+
+.card{
+    margin: 1.5em;
+    border: 2px solid pink;
+    align-items: baseline;
+    border-radius: 14px;
 }
-#lista-filmes{
-    display:none;
+
+.card:hover{
+    background-color: #FF69B4;
+}
+
+.card-title{
+    text-align: center;
+    font-weight: 700;
+    color: #000000;
+}
+
+.card-img-topz{
+    width: 100%;
+}
+
+.btnDetalhesFilme{
+    width: 120px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 12px;
+    margin-left: 25%;
+    background-color: #FF69B4;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.btnDetalhesFilme:hover{
+    background-color: #C71585;
+    color: #F5FFFA;
 }
