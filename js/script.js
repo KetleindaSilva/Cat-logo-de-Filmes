@@ -8,10 +8,17 @@ let listaFilme = document.querySelector("#lista-filme");
 btnBuscarFilme.onclick = () => {
     if(inputBuscarFilme.value.length > 0){
         let filmes = new Array();
+<<<<<<< HEAD
         fetch("http://www.omdbapi.com/?apikey=e539ebf5&s="+inputBuscarFilme.value, {mode: "cors"})
         .then((resp) => resp.json())
         .then((resp) => {
             resp.Search.forEach(item => {
+=======
+        fetch("https://www.omdbapi.com/?apikey=e539ebf5&s="+inputBuscarFilme.value)
+        .then((resp)=> resp.json())
+        .then((resp)=> {
+            resp.Search.forEach((item)=>{
+>>>>>>> 9e973ba2acfa3c1df1ad7ee9332b2ac021f3a0c3
                 console.log(item);
                 let filme = new Filme(
                     item.imdbID,
@@ -83,6 +90,26 @@ let listarFilmes = async (filmes) => {
 }
 
 
+<<<<<<< HEAD
+=======
+}
+let detalhesFilme = async (id)=>{
+    let filmes = new Array();
+    fetch("https://www.omdbapi.com/?apikey=e539ebf5&i="+id)
+    .then((resp)=> resp.json())
+    .then((resp)=>{
+        console.log(resp);
+        let filme = new Filme(
+            resp.Title,
+            resp.Year,
+            resp.imdbID,
+            resp.Type,
+            resp.Poster,
+        );
+        filmes.push(filme);
+    })
+}
+>>>>>>> 9e973ba2acfa3c1df1ad7ee9332b2ac021f3a0c3
 
 /*
 let direcao = [
