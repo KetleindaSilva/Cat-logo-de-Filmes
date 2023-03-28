@@ -37,7 +37,7 @@
     border-radius: 10px;
     padding: 10px;
     margin: 12px;
-    margin-left: 25%;
+    margin-left: 25vw;
     background-color: #FF69B4;
     font-weight: 600;
     color: #ffffff;
@@ -46,4 +46,50 @@
 .btnDetalhesFilme:hover{
     background-color: #C71585;
     color: #F5FFFA;
+}
+img.imagemCardDetalhes{
+    width:30vw;
+    height: 40vh;
+    text-align: left;
+    padding-left: 2vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+}
+img.imagemCardDetalhes:hover{
+    border-radius: 15px;
+}
+div.carddetalhes{
+    display:flex;
+    font-weight: 400;
+    justify-content: space-between;
+    width: 80vw;
+    margin-left: 3vw;
+    margin-right: 8vw;
+    padding-top: 3vh;
+    border-radius: 18px;
+    border:#C71585 5px solid ;
+    background-color: #fe91d6;
+}
+h5.card-title{
+    margin-top: 3vh;
+}
+div.detalhescard{
+    margin-top: 1vh;
+}
+#btnSalvar{
+    width:5vw;
+    margin-left: 3vw;
+    padding: 2px 2px 2px 2px;
+    border-radius: 10px;
+    margin-top: 2vh;
+    border: #C71585 2px solid;
+}
+#btnFechar{
+    width:5vw;
+    margin-left: 3vw;
+    padding: 2px 2px 2px 2px;
+    border-radius: 10px;
+    margin-top: 2vh;
+    border: #C71585 2px solid;
 }
