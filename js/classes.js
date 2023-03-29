@@ -145,7 +145,7 @@ class Filme{
 
         let btnSalvar = document.createElement('button');
         btnSalvar.appendChild(document.createTextNode('Salvar'));
-        btnSalvar.setAttribute('id', 'btnSalvar');
+        btnSalvar.setAttribute('id','btnSalvar');
         divDetalhes.appendChild(btnSalvar);
 
         let btnFechar = document.createElement('button');
