@@ -98,3 +98,19 @@ div.detalhescard{
     margin-bottom: 1vh;
     border: #C71585 2px solid;
 }
+#btnEditar{
+    width:9vw;
+    margin-left: 2vw;
+    padding: 2px 4px 2px 4px;
+    border-radius: 10px;
+    margin-bottom: 1vh;
+    border: #C71585 2px solid;
+}
+#btnDesfavorito{
+    width:9vw;
+    margin-left: 2vw;
+    padding: 2px 4px 2px 4px;
+    border-radius: 10px;
+    margin-bottom: 1vh;
+    border: #C71585 2px solid;
+}

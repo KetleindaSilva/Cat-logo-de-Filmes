@@ -1,20 +1,20 @@
-class Ator{
-    constructor(id, nome){
+class Ator {
+    constructor(id, nome) {
         this.nome = nome;
         this.id = id;
     }
 }
 
-class Diretor{
-    constructor(id, nome){
+class Diretor {
+    constructor(id, nome) {
         this.nome = nome;
         this.id = id;
     }
 }
 
 
-class Filme{
-    constructor(id, titulo, ano, genero, duracao, sinopse, cartaz, direcao, elenco, classificacao, avaliacao){
+class Filme {
+    constructor(id, titulo, ano, genero, duracao, sinopse, cartaz, direcao, elenco, classificacao, avaliacao) {
         this.id = id;
         this.titulo = titulo;
         this.ano = ano;
@@ -73,7 +73,7 @@ class Filme{
 
         this.setBtnDetalhes();
         cardBody.appendChild(this.getBtnDetalhes());
-    
+
         return card;
     }
 
@@ -122,15 +122,22 @@ class Filme{
         divAvaliacao.setAttribute("class", "avaliacaocard");
         let divSinopse = document.createElement("div");
         divSinopse.setAttribute("class", "sinopsecard");
+        let divClassificacao = document.createElement("div");
+        divClassificacao.setAttribute("class", "classificacaocard");
+
+        h5TituloDetalhes.appendChild(document.createTextNode(this.titulo));
 
         divAno.appendChild(document.createTextNode(this.ano));
         divGenero.appendChild(document.createTextNode(this.genero));
         divDuracao.appendChild(document.createTextNode(this.duracao));
         divDirecao.appendChild(document.createTextNode(this.direcao));
         divElenco.appendChild(document.createTextNode(this.elenco));
+        divClassificacao.appendChild(document.createTextNode(this.classificacao))
         divAvaliacao.appendChild(document.createTextNode(this.avaliacao));
         divSinopse.appendChild(document.createTextNode(this.sinopse));
 
+        divDetalhes.appendChild(h5TituloDetalhes);
+        divDetalhes.appendChild(divClassificacao);
         divDetalhes.appendChild(divAno);
         divDetalhes.appendChild(divGenero);
         divDetalhes.appendChild(divDuracao);
@@ -138,6 +145,7 @@ class Filme{
         divDetalhes.appendChild(divElenco);
         divDetalhes.appendChild(divAvaliacao);
         divDetalhes.appendChild(divSinopse);
+
         cardDet.appendChild(imgcard);
         cardDet.appendChild(BodyDetalhes);
         BodyDetalhes.appendChild(h5TituloDetalhes);
@@ -145,7 +153,7 @@ class Filme{
 
         let btnSalvar = document.createElement('button');
         btnSalvar.appendChild(document.createTextNode('Salvar'));
-        btnSalvar.setAttribute('id','btnSalvar');
+        btnSalvar.setAttribute('id', 'btnSalvar');
         divDetalhes.appendChild(btnSalvar);
 
         let btnFechar = document.createElement('button');
@@ -153,9 +161,35 @@ class Filme{
         btnFechar.setAttribute('id', 'btnFechar');
         divDetalhes.appendChild(btnFechar);
 
-        return cardDet;
+        let btnDesfavoritar = document.createElement("button");
+        btnDesfavoritar.appendChild(document.createTextNode("Desfavoritar"));
+        btnDesfavoritar.setAttribute("id", "btnDesfavorito");
+        divDetalhes.appendChild(btnDesfavoritar);
 
+        let btnEditar = document.createElement("button");
+        btnEditar.appendChild(document.createTextNode("Editar"));
+        btnEditar.setAttribute("id", "btnEditar");
+        btnEditar.setAttribute("type", "text");
+        divDetalhes.appendChild(btnEditar);
+
+        btnEditar.addEventListener('click', () => {
+
+            let outroTitulo = document.querySelector(".h5TituloDetalhes");
+            outroTitulo.innerHTML = "";
+
+            document.querySelector("#divDuracao").style.display = "none";
+            document.querySelector("#divClassificacao").style.display = "none";
+            document.querySelector("#divGenero").style.display = "none";
+            document.querySelector("#divAvaliacao").style.display = "none";
+            document.querySelector("#divAno").style.display = "none";
+            document.querySelector("#divElenco").style.display = "none";
+
+        })
+
+
+        return cardDet;
     }
+    
 }
 /*class Detalhes{
     constructor(titulo,ano,id,tipo,poster){
