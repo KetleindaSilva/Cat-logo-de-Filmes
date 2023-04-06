@@ -12,24 +12,24 @@
 }
 
 .card{
-    margin:2vw;
     border: 3px solid pink;
     align-items: baseline;
+    text-align: center;
     border-radius: 14px;
-    width:24vw;
-    height: 40vh;
+    width:25vw;
+    margin: 1em;
 }
+
 .card img{
     border-radius: 14px;
 }
 
-.card:hover{
-    background-color: #FF69B4;
-}
+
 
 .card-title{
     text-align: center;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
     color: #000000;
 }
 
@@ -38,24 +38,22 @@
 }
 
 .btnDetalhesFilme{
-    width: 10vw;
+    width: 9vw;
     border-radius: 10px;
-    padding: 10px;
-    margin: 12px;
-    margin-left: 15vw;
+    padding: 8px;
+    margin-top: 0.5vh;
+    margin-left: 7vw;
     background-color: #FF69B4;
     font-weight: 600;
     color: #ffffff;
 }
 
 .btnDetalhesFilme:hover{
-    background-color: #C71585;
-    color: #F5FFFA;
+    background-color: #eab6d7;
+    color: #b103a2;
 }
 img.imagemCardDetalhes{
-    width:25vw;
-    height: 40vh;
-    text-align: left;
+    width:20vw;
     padding-left: 2vw;
     padding-right: 1vw;
     padding-top: 1vh;
@@ -71,7 +69,7 @@ div.carddetalhes{
     justify-content: space-between;
     width: 70vw;
     margin-left: 3vw;
-    margin-right: 9vw;
+    margin-right: 8vw;
     padding-top: 3vh;
     border-radius: 18px;
     border:#C71585 5px solid ;
@@ -84,7 +82,7 @@ div.detalhescard{
     margin-top: 1vh;
 }
 #btnSalvar{
-    width:8vw;
+    width:9vw;
     margin-left: 2vw;
     padding: 2px 4px 2px 4px;
     border-radius: 10px;
@@ -92,7 +90,7 @@ div.detalhescard{
     border: #C71585 2px solid;
 }
 #btnFechar{
-    width:8vw;
+    width:9vw;
     margin-left: 2vw;
     padding: 2px 4px 2px 4px;
     border-radius: 10px;
@@ -100,7 +98,7 @@ div.detalhescard{
     border: #C71585 2px solid;
 }
 #btnEditar{
-    width:8vw;
+    width:9vw;
     margin-left: 2vw;
     padding: 2px 4px 2px 4px;
     border-radius: 10px;
@@ -108,7 +106,7 @@ div.detalhescard{
     border: #C71585 2px solid;
 }
 #btnDesfavorito{
-    width:8vw;
+    width:9vw;
     margin-left: 2vw;
     padding: 2px 4px 2px 4px;
     border-radius: 10px;
