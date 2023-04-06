@@ -1,13 +1,14 @@
 
 let inputBuscarFilme = document.querySelector("#input-buscar-filme");
 let btnBuscarFilme = document.querySelector("#btn-buscar-filme");
-
 let mostrarFilme = document.querySelector("#mostrar-filme");
 let listaFilme = document.querySelector("#lista-filme");
 
 btnBuscarFilme.onclick = () => {
+
     if (inputBuscarFilme.value.length > 0) {
         let filmes = new Array();
+
         fetch("https://www.omdbapi.com/?apikey=e539ebf5&s=" + inputBuscarFilme.value, { mode: "cors" })
             .then((resp) => resp.json())
             .then((resp) => {

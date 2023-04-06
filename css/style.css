@@ -12,11 +12,12 @@
 }
 
 .card{
-    margin: 1em;
+    margin:2vw;
     border: 3px solid pink;
     align-items: baseline;
     border-radius: 14px;
-    width:30vw;
+    width:24vw;
+    height: 40vh;
 }
 .card img{
     border-radius: 14px;
@@ -70,7 +71,7 @@ div.carddetalhes{
     justify-content: space-between;
     width: 70vw;
     margin-left: 3vw;
-    margin-right: 8vw;
+    margin-right: 9vw;
     padding-top: 3vh;
     border-radius: 18px;
     border:#C71585 5px solid ;
@@ -83,15 +84,15 @@ div.detalhescard{
     margin-top: 1vh;
 }
 #btnSalvar{
-    width:9vw;
-    margin-left: 3vw;
+    width:8vw;
+    margin-left: 2vw;
     padding: 2px 4px 2px 4px;
     border-radius: 10px;
     margin-top: 1vh;
     border: #C71585 2px solid;
 }
 #btnFechar{
-    width:9vw;
+    width:8vw;
     margin-left: 2vw;
     padding: 2px 4px 2px 4px;
     border-radius: 10px;
@@ -99,7 +100,7 @@ div.detalhescard{
     border: #C71585 2px solid;
 }
 #btnEditar{
-    width:9vw;
+    width:8vw;
     margin-left: 2vw;
     padding: 2px 4px 2px 4px;
     border-radius: 10px;
@@ -107,7 +108,7 @@ div.detalhescard{
     border: #C71585 2px solid;
 }
 #btnDesfavorito{
-    width:9vw;
+    width:8vw;
     margin-left: 2vw;
     padding: 2px 4px 2px 4px;
     border-radius: 10px;
