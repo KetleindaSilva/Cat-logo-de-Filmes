@@ -69,7 +69,7 @@ div.carddetalhes{
     justify-content: space-between;
     width: 70vw;
     margin-left: 3vw;
-    margin-right: 8vw;
+    margin-right: 7vw;
     padding-top: 3vh;
     border-radius: 18px;
     border:#C71585 5px solid ;
@@ -82,7 +82,7 @@ div.detalhescard{
     margin-top: 1vh;
 }
 #btnSalvar{
-    width:9vw;
+    width:8vw;
     margin-left: 2vw;
     padding: 2px 4px 2px 4px;
     border-radius: 10px;
@@ -90,7 +90,7 @@ div.detalhescard{
     border: #C71585 2px solid;
 }
 #btnFechar{
-    width:9vw;
+    width:8vw;
     margin-left: 2vw;
     padding: 2px 4px 2px 4px;
     border-radius: 10px;
@@ -98,7 +98,7 @@ div.detalhescard{
     border: #C71585 2px solid;
 }
 #btnEditar{
-    width:9vw;
+    width:8vw;
     margin-left: 2vw;
     padding: 2px 4px 2px 4px;
     border-radius: 10px;
@@ -106,7 +106,7 @@ div.detalhescard{
     border: #C71585 2px solid;
 }
 #btnDesfavorito{
-    width:9vw;
+    width:8vw;
     margin-left: 2vw;
     padding: 2px 4px 2px 4px;
     border-radius: 10px;

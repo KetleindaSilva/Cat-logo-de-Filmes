@@ -107,14 +107,14 @@ let mostraFavoritos = () => {
             item.id,
             item.titulo,
             item.ano,
-            item.genero,
-            item.duracao,
+           null,
+           null,
+           null,
             item.cartaz,
-            item.cartaz,
-            item.direcao,
-            item.elenco,
-            item.classificacao,
-            item.avaliacao,
+           null,
+           null,
+           null,
+           null
         )
         filmes.push(filme);
     });
