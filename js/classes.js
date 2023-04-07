@@ -175,8 +175,7 @@ class Filme {
         btnEditar.addEventListener('click', () => {
 
             let outroTitulo = document.querySelector(".h5TituloDetalhes");
-            outroTitulo.innerHTML = "";
-
+            outroTitulo.innerHTML="";
             document.querySelector("#divDuracao").style.display = "none";
             document.querySelector("#divClassificacao").style.display = "none";
             document.querySelector("#divGenero").style.display = "none";

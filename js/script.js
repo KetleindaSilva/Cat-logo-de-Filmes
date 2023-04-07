@@ -135,6 +135,13 @@ let Desfavoritar = (id) => {
     mostraFavoritos();
 }
 
+let Editar = (filme) =>{
+    let filmesString= localStorage.getItem('filmesFavoritos');
+    filmes = JSON.parse(filmesString);
+    let lugar = filmes.findIndex(function(item){
+        return item.id ===filme.id;
+    })
+}
     let listarFilmes = async (filmes) => {
         let listaFilmes = await document.querySelector("#lista-filmes");
         listaFilmes.style.display = "flex";
